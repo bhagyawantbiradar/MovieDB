@@ -14,5 +14,21 @@ class MovieDetailsViewModel @Inject constructor() : ViewModel() {
     val movieLiveData : LiveData<Movie>
     get() = movieObject
 
+    private val isClickedObject = MutableLiveData<Boolean>()
+    val isClickedLiveData : LiveData<Boolean>
+        get() = isClickedObject
+
+
+    fun updateMovie(movie: Movie){
+        movieObject.value = movie
+    }
+
+    fun performCLick(){
+        isClickedObject.value = true
+    }
+
+    fun updateClick(isClicked : Boolean){
+        isClickedObject.value = isClicked
+    }
 
 }

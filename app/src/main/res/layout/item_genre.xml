@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TextView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    style="@style/genre_tags_text_style"
-    android:text="Action"
-    android:background="@drawable/background_genre"
-    android:layout_height="wrap_content">
-</TextView>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginEnd="@dimen/dimen8">
+
+    <data>
+
+        <variable
+            name="item"
+            type="String" />
+    </data>
+
+    <TextView
+        style="@style/genre_tags_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/background_genre"
+        android:text="@{item}"
+        tools:text="Action" />
+</layout>

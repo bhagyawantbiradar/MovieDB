@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bhagyawant.moviedb.databinding.ItemMovieBinding
 import com.bhagyawant.moviedb.domain.model.Movie
 
-class MovieAdapter(private val movies: List<Movie>) :
+class MovieAdapter(private val movies: List<Movie>, val onMovieClickListener: OnMovieClickListener) :
     RecyclerView.Adapter<MovieAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
@@ -17,6 +17,9 @@ class MovieAdapter(private val movies: List<Movie>) :
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val movie = movies[position]
+        holder.itemView.setOnClickListener {
+            onMovieClickListener.onMovieClick(movie)
+        }
         holder.bind(movie)
     }
 
@@ -32,4 +35,8 @@ class MovieAdapter(private val movies: List<Movie>) :
             binding.executePendingBindings()
         }
     }
+}
+
+interface OnMovieClickListener {
+    fun onMovieClick(movie: Movie)
 }

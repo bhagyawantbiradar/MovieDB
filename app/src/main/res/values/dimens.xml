@@ -2,10 +2,12 @@
 <resources>
     <!--General dimensions-->
     <dimen name="dimen8">8dp</dimen>
+    <dimen name="dimen16">16dp</dimen>
     <dimen name="dimen4">4dp</dimen>
     <dimen name="dimen2">2dp</dimen>
     <dimen name="dimen24">24dp</dimen>
     <dimen name="dimen_sp8">8sp</dimen>
+    <dimen name="dimen_32">32dp</dimen>
 
     <!--Movies List Activity-->
     <dimen name="list_item_title_text_size">14sp</dimen>
@@ -30,4 +32,5 @@
     <dimen name="movie_detail_poster_height">150dp</dimen>
     <dimen name="button_primary_text_size">12sp</dimen>
     <dimen name="button_primary_text_line_height">14sp</dimen>
+    <dimen name="dimen_cast_radius">5dp</dimen>
 </resources>

@@ -14,13 +14,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:background="@color/primary_background"
             tools:context=".presentation.movies_list.MovieDetailsActivity">
-
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
@@ -34,7 +32,6 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:menu="@menu/menu"
                 app:navigationIcon="@drawable/ic_imdb" />
-
 
             <TextView
                 android:id="@+id/tv_movie_name"
@@ -64,14 +61,16 @@
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/iv_options"
-                android:layout_width="32dp"
+                android:layout_width="@dimen/dimen_32"
                 android:layout_height="20dp"
+                android:onClick="@{()->movieDetailViewModel.performCLick()}"
                 android:src="@drawable/ic_options"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/tv_year_duration_rate" />
 
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/ivPoster"
+                imageUrl="@{movieDetailViewModel.movieLiveData.poster}"
                 android:layout_width="@dimen/movie_detail_poster_width"
                 android:layout_height="@dimen/movie_detail_poster_height"
                 android:layout_marginStart="8dp"
@@ -81,7 +80,7 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_genre"
                 android:layout_width="0dp"
-                android:layout_height="40dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dimen8"
                 android:layout_marginEnd="@dimen/dimen8"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -124,6 +123,7 @@
                 android:layout_marginEnd="@dimen/dimen8"
                 android:background="@drawable/ic_play_rect"
                 android:gravity="center_vertical"
+                android:onClick="@{()->movieDetailViewModel.performCLick()}"
                 android:padding="@dimen/dimen8"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -169,6 +169,7 @@
                 android:layout_marginEnd="@dimen/dimen8"
                 android:background="@drawable/ic_add_rect"
                 android:gravity="center_vertical"
+                android:onClick="@{()->movieDetailViewModel.performCLick()}"
                 android:padding="@dimen/dimen8"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -205,7 +206,7 @@
                 android:id="@+id/ll_ratings"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dimen8"
+                android:layout_marginTop="@dimen/dimen16"
                 android:orientation="horizontal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -219,8 +220,8 @@
                     android:orientation="vertical">
 
                     <androidx.appcompat.widget.AppCompatImageView
-                        android:layout_width="32dp"
-                        android:layout_height="32dp"
+                        android:layout_width="@dimen/dimen_32"
+                        android:layout_height="@dimen/dimen_32"
                         android:src="@drawable/ic_star" />
 
                     <LinearLayout
@@ -258,11 +259,12 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center|top"
+                    android:onClick="@{()->movieDetailViewModel.performCLick()}"
                     android:orientation="vertical">
 
                     <androidx.appcompat.widget.AppCompatImageView
-                        android:layout_width="32dp"
-                        android:layout_height="32dp"
+                        android:layout_width="@dimen/dimen_32"
+                        android:layout_height="@dimen/dimen_32"
                         android:src="@drawable/ic_star_white" />
 
                     <TextView
@@ -285,8 +287,8 @@
 
                     <TextView
                         style="@style/secondary_title_text_style"
-                        android:layout_width="32dp"
-                        android:layout_height="32dp"
+                        android:layout_width="@dimen/dimen_32"
+                        android:layout_height="@dimen/dimen_32"
                         android:background="@drawable/ic_metascore"
                         android:gravity="center"
                         android:text="@{movieDetailViewModel.movieLiveData.metascore}"
@@ -328,6 +330,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/dimen8"
+                android:layout_marginTop="@dimen/dimen8"
                 android:layout_marginEnd="@dimen/dimen8"
                 android:text="@string/top_billed_cast"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -340,6 +343,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/dimen8"
+                android:onClick="@{()->movieDetailViewModel.performCLick()}"
                 android:text="@string/see_all"
                 app:layout_constraintBottom_toBottomOf="@+id/tv_top_actors_title"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -348,7 +352,10 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_cast"
                 android:layout_width="0dp"
-                android:layout_height="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dimen8"
+                android:layout_marginTop="@dimen/dimen8"
+                android:layout_marginEnd="@dimen/dimen8"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
@@ -439,6 +446,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/dimen8"
                 android:layout_marginBottom="8dp"
+                android:onClick="@{()->movieDetailViewModel.performCLick()}"
                 android:text="@string/see_all"
                 app:layout_constraintBottom_toBottomOf="@+id/tv_awards_title"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -489,6 +497,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginEnd="@dimen/dimen8"
                 android:layout_marginBottom="8dp"
+                android:onClick="@{()->movieDetailViewModel.performCLick()}"
                 android:text="@string/see_all"
                 app:layout_constraintBottom_toBottomOf="@+id/tv_user_reviews_title"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -509,8 +518,8 @@
                 app:layout_constraintTop_toBottomOf="@id/tv_user_reviews_title">
 
                 <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_width="24dp"
-                    android:layout_height="24dp"
+                    android:layout_width="@dimen/dimen16"
+                    android:layout_height="@dimen/dimen16"
                     android:src="@drawable/ic_star" />
 
                 <TextView
@@ -562,6 +571,7 @@
                 android:layout_marginTop="@dimen/dimen8"
                 android:layout_marginEnd="@dimen/dimen8"
                 android:layout_marginBottom="@dimen/dimen8"
+                android:onClick="@{()->movieDetailViewModel.performCLick()}"
                 android:text="@string/add_a_review"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -625,7 +635,7 @@
                 android:background="@color/divider_color"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_content_rating_title" />
+                app:layout_constraintTop_toBottomOf="@+id/tv_content_rating" />
 
 
             <TextView
@@ -662,11 +672,11 @@
                 android:layout_marginStart="@dimen/dimen8"
                 android:layout_marginTop="@dimen/dimen4"
                 android:layout_marginEnd="@dimen/dimen8"
+                android:layout_marginBottom="@dimen/dimen_32"
                 android:text="@{movieDetailViewModel.movieLiveData.plot}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_post_summary_title" />
-
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </ScrollView>

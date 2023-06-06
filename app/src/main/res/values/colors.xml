@@ -22,6 +22,8 @@
     <color name="genre_tag_stroke_color">#949596</color>
     <color name="button_primary_text_color">#ffffff</color>
     <color name="clickable_blue_text_color">#3996C9</color>
+    <color name="item_movie_background_color">#181818</color>
+    <color name="background_movies_list">#181818</color>
 
 
 </resources>

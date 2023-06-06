@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--General dimensions-->
+    <dimen name="dimen8">8dp</dimen>
+    <dimen name="dimen4">4dp</dimen>
+    <dimen name="dimen2">2dp</dimen>
+    <dimen name="dimen24">24dp</dimen>
+    <dimen name="dimen_sp8">8sp</dimen>
+
+    <!--Movies List Activity-->
+    <dimen name="list_item_title_text_size">14sp</dimen>
+    <dimen name="list_item_title_text_line_height">16sp</dimen>
+    <dimen name="list_sub_item_title_text_size">12sp</dimen>
+    <dimen name="list_item_sub_title_text_line_height">14sp</dimen>
+
+    <!--Movie Details Activity-->
+    <dimen name="primary_title_text_size">25sp</dimen>
+    <dimen name="secondary_title_text_size">18sp</dimen>
+    <dimen name="primary_title_line_text_line_height">29sp</dimen>
+    <dimen name="secondary_title_line_text_line_height">20sp</dimen>
+    <dimen name="story_line_top_text_line_height">14sp</dimen>
+    <dimen name="genre_tags_text_line_height">14sp</dimen>
+    <dimen name="story_line_top_text_size">12sp</dimen>
+    <dimen name="genre_tags_text_size">12sp</dimen>
+    <dimen name="ternary_title_text_size">12sp</dimen>
+    <dimen name="ternary_desc_text_size">12sp</dimen>
+    <dimen name="ternary_title_line_text_line_height">14sp</dimen>
+    <dimen name="ternary_desc_line_text_line_height">14sp</dimen>
+    <dimen name="movie_detail_poster_width">100dp</dimen>
+    <dimen name="movie_detail_poster_height">150dp</dimen>
+    <dimen name="button_primary_text_size">12sp</dimen>
+    <dimen name="button_primary_text_line_height">14sp</dimen>
+</resources>

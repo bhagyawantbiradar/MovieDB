@@ -12,10 +12,8 @@ import javax.inject.Inject
 
 class GetMoviesListRepositoryMockImpl @Inject constructor(private val context: Context, private val gson: Gson) : GetMoviesListRepository {
 
-    var moviesJson : String? = ""
-
     override suspend fun getMovies(): List<Movie> {
-        moviesJson = Utils.getJsonFromAssets(context,"movies.json")
+        val moviesJson = Utils.getJsonFromAssets(context,"movies.json")
         val moviesDtoList : List<MovieDto> = gson.fromJson(moviesJson, object : TypeToken<List<MovieDto>>(){}.type)
         return moviesDtoToMoviesMapper(moviesDtoList)
     }

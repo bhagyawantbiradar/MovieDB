@@ -11,12 +11,13 @@ class GetMoviesListUseCase @Inject constructor(private val getMoviesListReposito
 
     operator fun invoke() : Flow<Resource<List<Movie>>> = flow {
         try {
-            emit(Resource.Loading())
+            emit(Resource.StartLoading())
             val result = getMoviesListRepository.getMovies()
             emit(Resource.Success(result))
+            emit(Resource.StopLoading())
         }catch (e : java.lang.Exception){
             emit(Resource.Error(message = "Exception"))
+            emit(Resource.StopLoading())
         }
     }
-
 }

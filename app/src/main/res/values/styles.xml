@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="primary_title_text_style">
+        <item name="android:textSize">@dimen/primary_title_text_size</item>
+        <item name="android:textColor">@color/primary_title_text_color</item>
+        <item name="fontFamily">@font/roboto_thin</item>
+        <item name="fontWeight">300</item>
+        <item name="lineHeight">@dimen/primary_title_line_text_line_height</item>
+    </style>
+
+    <style name="secondary_title_text_style">
+        <item name="android:textSize">@dimen/secondary_title_text_size</item>
+        <item name="android:textColor">@color/secondary_title_text_color</item>
+        <item name="fontFamily">@font/roboto_thin</item>
+        <item name="fontWeight">400</item>
+        <item name="lineHeight">@dimen/secondary_title_line_text_line_height</item>
+    </style>
+
+    <style name="ternary_title_text_style">
+        <item name="android:textSize">@dimen/ternary_title_text_size</item>
+        <item name="android:textColor">@color/ternary_title_text_color</item>
+        <item name="fontFamily">@font/roboto_thin</item>
+        <item name="fontWeight">400</item>
+        <item name="lineHeight">@dimen/ternary_title_line_text_line_height</item>
+    </style>
+
+    <style name="ternary_desc_text_style">
+        <item name="android:textSize">@dimen/ternary_desc_text_size</item>
+        <item name="android:textColor">@color/ternary_desc_text_color</item>
+        <item name="fontFamily">@font/roboto_thin</item>
+        <item name="fontWeight">400</item>
+        <item name="lineHeight">@dimen/ternary_desc_line_text_line_height</item>
+    </style>
+
+    <style name="list_item_title_text_style">
+        <item name="android:textSize">@dimen/list_item_title_text_size</item>
+        <item name="android:textColor">@color/list_item_title_text_color</item>
+        <item name="fontFamily">@font/roboto_thin</item>
+        <item name="lineHeight">@dimen/list_item_title_text_line_height</item>
+    </style>
+
+    <style name="list_item_sub_title_text_style">
+        <item name="android:textSize">@dimen/list_sub_item_title_text_size</item>
+        <item name="android:textColor">@color/list_item_sub_title_text_color</item>
+        <item name="fontFamily">@font/roboto_thin</item>
+        <item name="lineHeight">@dimen/list_item_sub_title_text_line_height</item>
+    </style>
+
+    <style name="story_line_top_text_style">
+        <item name="android:textSize">@dimen/story_line_top_text_size</item>
+        <item name="android:textColor">@color/story_line_top_text_color</item>
+        <item name="fontFamily">@font/roboto_thin</item>
+        <item name="lineHeight">@dimen/story_line_top_text_line_height</item>
+    </style>
+
+    <style name="genre_tags_text_style">
+        <item name="android:padding">@dimen/dimen4</item>
+        <item name="android:textSize">@dimen/genre_tags_text_size</item>
+        <item name="android:textColor">@color/genre_tag_text_color</item>
+        <item name="fontFamily">@font/roboto_thin</item>
+        <item name="fontWeight">300</item>
+        <item name="lineHeight">@dimen/story_line_top_text_line_height</item>
+    </style>
+
+    <style name="button_primary_text_style" parent="TextAppearance.AppCompat">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">@dimen/button_primary_text_size</item>
+        <item name="android:textColor">@color/button_primary_text_color</item>
+        <item name="fontFamily">@font/roboto_thin</item>
+        <item name="fontWeight">400</item>
+        <item name="lineHeight">@dimen/button_primary_text_line_height</item>
+    </style>
+
+    <style name="button_secondary_text_style">
+        <item name="android:textSize">@dimen/button_primary_text_size</item>
+        <item name="android:textColor">@color/button_primary_text_color</item>
+        <item name="fontFamily">@font/roboto_thin</item>
+        <item name="fontWeight">300</item>
+        <item name="lineHeight">@dimen/button_primary_text_line_height</item>
+    </style>
+
+    <style name="clickable_blue_text_style">
+        <item name="android:textSize">@dimen/button_primary_text_size</item>
+        <item name="android:textColor">@color/clickable_blue_text_color</item>
+        <item name="fontFamily">@font/roboto_thin</item>
+        <item name="fontWeight">300</item>
+        <item name="lineHeight">@dimen/button_primary_text_line_height</item>
+    </style>
+
+
+
+
+</resources>

@@ -1,3 +1,23 @@
 <resources>
     <string name="app_name">MovieDB</string>
+    <string name="profile">Profile</string>
+    <string name="search">Search</string>
+    <string name="watch_on_netflix">Watch on Netflix</string>
+    <string name="with_subscription">with subscription</string>
+    <string name="add_to_watchlist">Add to Watchlist</string>
+    <string name="metascore">Metascore</string>
+    <string name="rate_this">RATE THIS</string>
+    <string name="top_billed_cast">Top-Billed Cast</string>
+    <string name="see_all">SEE ALL</string>
+    <string name="directors">Directors</string>
+    <string name="writers">Writers</string>
+    <string name="awards">Awards</string>
+    <string name="user_reviews">User Reviews</string>
+    <string name="user_review_1">Xstal August 23, 2020\nWe gorge on the binaries prophesised once again, through an ever increasing bandwith, as we exponentially widen out dietary desire to…</string>
+    <string name="add_a_review">ADD A REVIEW</string>
+    <string name="parent_s_guide">Parent\'s Guide</string>
+    <string name="content_rating">Content Rating</string>
+    <string name="content_rating1">Rated R for sci-fi violence and brief sexual content</string>
+    <string name="storyline">Storyline</string>
+    <string name="post_summary">Plot Summary</string>
 </resources>

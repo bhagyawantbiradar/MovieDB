@@ -17,7 +17,7 @@ class MoviesListViewModel @Inject constructor(val getMoviesListUseCase: GetMovie
 
 
 
-    internal fun getMovies() {
+    fun getMovies() {
         getMoviesListUseCase().onEach { result ->
             when (result) {
                 is Resource.Success -> {
@@ -26,8 +26,11 @@ class MoviesListViewModel @Inject constructor(val getMoviesListUseCase: GetMovie
                 is Resource.Error -> {
                     Log.e(TAG, "getMovies: ${result.message}")
                 }
-                is Resource.Loading -> {
+                is Resource.StartLoading -> {
                     Log.d(TAG, "getMovies: Loading...")
+                }
+                is Resource.StopLoading -> {
+                    Log.d(TAG, "getMovies loading stopped ")
                 }
             }
         }.launchIn(viewModelScope)
